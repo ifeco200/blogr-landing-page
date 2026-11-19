@@ -1,0 +1,948 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Ubuntu", Arial, sans-serif;
+    color: #1f3f5b;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero {
+    min-height: 600px;
+    padding: 55px 10%;
+    border-bottom-left-radius: 100px;
+
+    background:
+        url("./images/bg-pattern-intro-desktop.svg")
+        no-repeat 25% 52%,
+        linear-gradient(
+            120deg,
+            #ff8f70,
+            #ff3d54
+        );
+
+    color: white;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_left {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.logo img {
+    width: 101px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.nav_list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    list-style: none;
+}
+
+.nav_item {
+    position: relative;
+}
+
+.nav_dropdown {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    background: transparent;
+    border: none;
+
+    color: white;
+    font-weight: 600;
+
+    opacity: 0.85;
+}
+
+.nav_dropdown:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.nav_dropdown img {
+    width: 10px;
+    transition: transform 0.3s ease;
+}
+
+.nav_item.active .nav_dropdown img {
+    transform: rotate(180deg);
+}
+
+
+/* =========================================
+   DROPDOWN MENU
+========================================= */
+
+.dropdown_menu {
+    position: absolute;
+    top: 40px;
+    left: -20px;
+
+    width: 170px;
+    padding: 25px;
+
+    background-color: white;
+
+    border-radius: 8px;
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+
+    list-style: none;
+
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+
+    z-index: 10;
+}
+
+.nav_item.active .dropdown_menu {
+    display: flex;
+}
+
+.dropdown_menu a {
+    color: #333;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.dropdown_menu a:hover {
+    font-weight: bold;
+}
+
+
+/* =========================================
+   AUTH BUTTONS
+========================================= */
+
+.desktop_auth {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.login_button {
+    color: white;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.login_button:hover {
+    text-decoration: underline;
+}
+
+.signup_button {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    background: white;
+    color: #ff525d;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.signup_button:hover {
+    background: #ff7b86;
+    color: white;
+}
+
+.mobile_auth {
+    display: none;
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero_content {
+    text-align: center;
+    margin-top: 140px;
+}
+
+.hero_content h1 {
+    font-size: clamp(2.3rem, 5vw, 3.8rem);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.hero_content p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.hero_buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.button {
+    display: inline-block;
+    padding: 14px 22px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.button_primary {
+    background: white;
+    color: #ff525d;
+}
+
+.button_primary:hover {
+    background: #ff7b86;
+    color: white;
+}
+
+.button_secondary {
+    border: 1px solid white;
+    color: white;
+}
+
+.button_secondary:hover {
+    background: white;
+    color: #ff525d;
+}
+
+
+/* =========================================
+   SECTION TWO
+   DESIGNED FOR THE FUTURE
+========================================= */
+
+.designed_section {
+    padding: 150px 10% 100px;
+
+    overflow: hidden;
+}
+
+.designed_section > h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 70px;
+}
+
+.designed_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.designed_text {
+    flex: 1;
+    max-width: 550px;
+}
+
+.designed_text article + article {
+    margin-top: 60px;
+}
+
+.designed_text h3 {
+    font-size: 1.7rem;
+    margin-bottom: 25px;
+}
+
+.designed_text p {
+    line-height: 1.8;
+    color: #4b5862;
+}
+
+.designed_image {
+    flex: 1;
+
+    position: relative;
+}
+
+.designed_image img {
+    width: 750px;
+    max-width: none;
+
+    position: relative;
+    left: 100px;
+}
+
+
+/* =========================================
+   SECTION THREE
+   INFRASTRUCTURE
+========================================= */
+
+.infrastructure_section {
+    position: relative;
+
+    min-height: 400px;
+
+    background:
+        url("./images/bg-pattern-circles.svg")
+        no-repeat -200px -500px,
+        #2c2d3f;
+
+    border-radius: 0 100px;
+    color: white;
+}
+
+.infrastructure_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 10%;
+
+    min-height: 400px;
+}
+
+.phones_image {
+    flex: 1;
+
+    position: relative;
+}
+
+.phones_image img {
+    width: 550px;
+
+    position: absolute;
+    top: -100px;
+    left: 0;
+}
+
+.infrastructure_text {
+    flex: 1;
+    padding: 40px 0;
+}
+
+.infrastructure_text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+
+.infrastructure_text p {
+    line-height: 1.8;
+    color: #e2e2e2;
+}
+
+
+/* =========================================
+   SECTION FOUR
+   LAPTOP / TOOLS
+========================================= */
+
+.tools_section {
+    padding: 150px 10%;
+    overflow: hidden;
+}
+
+.tools_container {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.tools_image {
+    flex: 1;
+    position: relative;
+}
+
+.tools_image img {
+    width: 750px;
+    max-width: none;
+
+    position: relative;
+    right: 200px;
+}
+
+.tools_text {
+    flex: 1;
+    max-width: 550px;
+}
+
+.tools_text article + article {
+    margin-top: 60px;
+}
+
+.tools_text h2 {
+    font-size: 1.7rem;
+    margin-bottom: 25px;
+}
+
+.tools_text p {
+    line-height: 1.8;
+    color: #4b5862;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    padding: 70px 10%;
+
+    background: #25252f;
+
+    border-top-right-radius: 100px;
+
+    color: white;
+}
+
+.footer_container {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 50px;
+}
+
+.footer_logo img {
+    width: 101px;
+}
+
+.footer_column h3 {
+    margin-bottom: 30px;
+}
+
+.footer_column ul {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer_column a {
+    color: #c8c8cb;
+    font-size: 15px;
+}
+
+.footer_column a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   MOBILE MENU ICONS
+========================================= */
+
+.menu_toggle {
+    display: none;
+
+    background: transparent;
+    border: none;
+}
+
+.menu_toggle img {
+    width: 32px;
+}
+
+.menu_close_icon {
+    display: none;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media screen and (max-width: 1000px) {
+
+    .hero {
+        padding: 45px 6%;
+    }
+
+    .header_left {
+        gap: 35px;
+    }
+
+    .nav_list {
+        gap: 20px;
+    }
+
+    .designed_section {
+        padding: 120px 6% 80px;
+    }
+
+    .designed_image img {
+        width: 600px;
+        left: 50px;
+    }
+
+    .infrastructure_container {
+        padding: 0 6%;
+    }
+
+    .phones_image img {
+        width: 450px;
+    }
+
+    .tools_container {
+        gap: 50px;
+    }
+
+    .tools_image img {
+        width: 650px;
+        right: 150px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* HERO */
+
+    .hero {
+        min-height: 600px;
+
+        padding: 40px 25px;
+
+        border-bottom-left-radius: 100px;
+
+        background:
+            url("./images/bg-pattern-intro-mobile.svg")
+            no-repeat 35% 35%,
+            linear-gradient(
+                120deg,
+                #ff8f70,
+                #ff3d54
+            );
+    }
+
+
+    /* HEADER */
+
+    .header {
+        position: relative;
+    }
+
+    .header_left {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .menu_toggle {
+        display: block;
+    }
+
+    .menu_close_icon {
+        display: none;
+    }
+
+    .menu_toggle.open .menu_open_icon {
+        display: none;
+    }
+
+    .menu_toggle.open .menu_close_icon {
+        display: block;
+    }
+
+
+    /* MOBILE NAVIGATION */
+
+    .navigation {
+        display: none;
+
+        position: absolute;
+
+        top: 80px;
+        left: 0;
+        right: 0;
+
+        width: 100%;
+
+        padding: 30px;
+
+        background: white;
+
+        border-radius: 8px;
+
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+
+        z-index: 100;
+    }
+
+    .navigation.open {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav_list {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 25px;
+
+        list-style: none;
+    }
+
+    .nav_item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav_dropdown {
+        justify-content: center;
+
+        width: 100%;
+
+        color: #1f3f5b;
+
+        font-size: 18px;
+    }
+
+    .nav_dropdown img {
+        filter: brightness(0) saturate(100%)
+            invert(49%) sepia(74%) saturate(1191%)
+            hue-rotate(315deg) brightness(102%)
+            contrast(102%);
+    }
+
+    .dropdown_menu {
+        position: static;
+
+        width: 100%;
+
+        margin-top: 15px;
+
+        background: #efeff1;
+
+        box-shadow: none;
+
+        border-radius: 5px;
+
+        padding: 20px;
+
+        align-items: center;
+    }
+
+    .dropdown_menu a {
+        color: #4b5862;
+        font-weight: 600;
+    }
+
+
+    /* MOBILE AUTH */
+
+    .desktop_auth {
+        display: none;
+    }
+
+    .mobile_auth {
+        display: flex;
+
+        flex-direction: column;
+        align-items: center;
+
+        gap: 20px;
+
+        width: 100%;
+
+        margin-top: 30px;
+        padding-top: 25px;
+
+        border-top: 1px solid #e5e5e5;
+    }
+
+    .mobile_auth .login_button {
+        color: #1f3f5b;
+    }
+
+    .mobile_auth .signup_button {
+        background: linear-gradient(
+            120deg,
+            #ff8f70,
+            #ff3d54
+        );
+
+        color: white;
+    }
+
+
+    /* HERO TEXT */
+
+    .hero_content {
+        margin-top: 120px;
+    }
+
+    .hero_content h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .hero_content p {
+        font-size: 17px;
+        line-height: 1.5;
+        margin-top: 25px;
+        margin-bottom: 40px;
+    }
+
+
+    /* SECTION TWO */
+
+    .designed_section {
+        padding: 100px 25px 80px;
+    }
+
+    .designed_section > h2 {
+        font-size: 2rem;
+        margin-bottom: 50px;
+    }
+
+    .designed_container {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    .designed_image {
+        width: 100%;
+    }
+
+    .designed_image img {
+        position: static;
+
+        width: 100%;
+        max-width: 500px;
+
+        margin: auto;
+    }
+
+    .designed_text {
+        text-align: center;
+    }
+
+    .designed_text h3 {
+        font-size: 1.6rem;
+        line-height: 1.3;
+    }
+
+    .designed_text p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .designed_text article + article {
+        margin-top: 50px;
+    }
+
+
+    /* SECTION THREE */
+
+    .infrastructure_section {
+        margin-top: 150px;
+
+        border-radius: 0 100px;
+
+        background:
+            url("./images/bg-pattern-circles.svg")
+            no-repeat center -250px,
+            #2c2d3f;
+    }
+
+    .infrastructure_container {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 0 25px 80px;
+    }
+
+    .phones_image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .phones_image img {
+        position: absolute;
+
+        width: 100%;
+        max-width: 450px;
+
+        top: -180px;
+        left: 50%;
+
+        transform: translateX(-50%);
+    }
+
+    .infrastructure_text {
+        padding-top: 80px;
+    }
+
+    .infrastructure_text h2 {
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+
+    .infrastructure_text p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+
+    /* SECTION FOUR */
+
+    .tools_section {
+        padding: 100px 25px;
+    }
+
+    .tools_container {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .tools_image {
+        width: 100%;
+    }
+
+    .tools_image img {
+        position: static;
+
+        width: 100%;
+        max-width: 500px;
+
+        margin: auto;
+    }
+
+    .tools_text {
+        text-align: center;
+    }
+
+    .tools_text h2 {
+        font-size: 1.6rem;
+    }
+
+    .tools_text p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .tools_text article + article {
+        margin-top: 50px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding: 75px 25px;
+
+        border-top-right-radius: 100px;
+    }
+
+    .footer_container {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        gap: 50px;
+    }
+
+    .footer_logo img {
+        margin: auto;
+    }
+
+    .footer_column h3 {
+        margin-bottom: 25px;
+    }
+
+    .footer_column ul {
+        gap: 15px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media screen and (max-width: 375px) {
+
+    .hero_content h1 {
+        font-size: 2rem;
+    }
+
+    .hero_buttons {
+        gap: 10px;
+    }
+
+    .button {
+        padding: 13px 16px;
+        font-size: 14px;
+    }
+
+    .designed_section > h2 {
+        font-size: 1.7rem;
+    }
+
+    .infrastructure_text h2 {
+        font-size: 1.7rem;
+    }
+
+}
